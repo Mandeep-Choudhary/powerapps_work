@@ -1,0 +1,229 @@
+Screen1 As screen:
+
+    Gallery2 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =519
+        Items: =Sort(Filter(EMPLOYEEs,VAR1),'Modified On',SortOrder.Descending)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =42
+        Width: =950
+        X: =236
+        Y: =209
+        ZIndex: =1
+
+        "empid As 'Text input'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnChange: =Select(Button1);
+            Value: =ThisItem.EMP_ID
+            Width: =79
+            X: =47
+            Y: =30
+            ZIndex: =1
+
+        "designation As 'Text input'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnChange: =Select(Button1);
+            Value: =ThisItem.DESIGNATION
+            Width: =164
+            X: =401
+            Y: =30
+            ZIndex: =2
+
+        "firstname As 'Text input'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnChange: =Select(Button1);
+            Value: =ThisItem.FIRST_NAME
+            Width: =140
+            X: =126
+            Y: =30
+            ZIndex: =4
+
+        "team As 'Text input'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnChange: =Select(Button1);
+            Value: =ThisItem.TEAM
+            Width: =241
+            X: =565
+            Y: =30
+            ZIndex: =5
+
+        "lastname As 'Text input'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnChange: =Select(Button1);
+            Value: =ThisItem.LAST_NAME
+            Width: =135
+            X: =266
+            Y: =30
+            ZIndex: =6
+
+        "skills As 'Text input'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnChange: =Select(Button1);
+            Value: =ThisItem.SKILLS
+            Width: =158
+            X: =784
+            Y: =30
+            ZIndex: =7
+
+        Button1 As button:
+            Height: =22
+            OnSelect: |-
+                =If(IsBlank(LookUp(rowUpdates,EMP_ID=ThisItem.EMP_ID)),Collect(rowUpdates,ThisItem));
+                UpdateIf(rowUpdates,EMP_ID=ThisItem.EMP_ID,{EMP_ID:empid.Value,FIRST_NAME:firstname.Value,LAST_NAME:lastname.Value,DESIGNATION:designation.Value,TEAM:team.Value,SKILLS:skills.Value});
+            Text: ="Button"
+            Visible: |
+                =false
+            Width: =64
+            X: =806
+            Y: =8
+            ZIndex: =8
+
+        Icon3 As icon.Trash:
+            Height: =32
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =Remove(EMPLOYEEs,ThisItem);
+                Set(VAR1,false);
+                Set(VAR1,true);
+            Width: =48
+            X: =892
+            Y: =30
+            ZIndex: =9
+
+    "TextInputCanvas1 As 'Text input'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =0
+        Width: =320
+        X: =40
+        Y: =72
+        ZIndex: =2
+
+    Button2 As button:
+        DisplayMode: |-
+            =If(
+                CountRows(rowUpdates) = 0,
+                DisplayMode.Disabled,
+                DisplayMode.Edit
+            )
+        OnSelect: |
+            =Patch(
+                EMPLOYEEs,
+                rowUpdates
+            );
+            Notify(
+                "Details Updated Successfully",
+                NotificationType.Success,
+                3000
+            );
+            Clear(rowUpdates);
+            Set(
+                VAR1,
+                false
+            );
+            Set(
+                VAR1,
+                true
+            );
+        Text: ="Save"
+        X: =1031
+        Y: =114
+        ZIndex: =3
+
+    Rectangle1 As rectangle:
+        Height: =72
+        Width: =1359
+        ZIndex: =4
+
+    Label1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Size: =25
+        Text: ="ADMIN PAGE"
+        Width: =244
+        X: =40
+        Y: =4
+        ZIndex: =5
+
+    Rectangle2 As rectangle:
+        Height: =52
+        Width: =902
+        X: =284
+        Y: =185
+        ZIndex: =6
+
+    Label2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: ="LAST NAME"
+        X: =504
+        Y: =197
+        ZIndex: =7
+
+    Label3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: ="ID"
+        X: =295
+        Y: =197
+        ZIndex: =8
+
+    Label4 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: ="TEAM"
+        X: =806
+        Y: =197
+        ZIndex: =9
+
+    Label5 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: ="DESIGNATION"
+        X: =635
+        Y: =197
+        ZIndex: =10
+
+    Label6 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: ="SKILLS"
+        X: =1036
+        Y: =197
+        ZIndex: =11
+
+    Label7 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: ="FIRST NAME"
+        X: =369
+        Y: =197
+        ZIndex: =12
+
+    ButtonCanvas2 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Primary
+        DisplayMode: =DisplayMode.Edit
+        Height: =50
+        OnSelect: |-
+            =Patch(EMPLOYEEs,{EMP_ID:"NEW"});
+            Set(VAR1,false);
+            Set(VAR1,true);
+        Text: ="ADD"
+        Width: =141
+        X: =852
+        Y: =109
+        ZIndex: =13
+

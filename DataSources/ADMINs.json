@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "craa5_admins",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "craa5_admin",
+    "MaxGetRowsCount": 500,
+    "Name": "ADMINs",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "craa5_admin_AsyncOperations": "System Jobs",
+      "craa5_admin_BulkDeleteFailures": "Bulk Delete Failures",
+      "craa5_admin_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "craa5_admin_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "craa5_admin_ProcessSession": "Process Sessions",
+      "craa5_admin_SyncErrors": "Sync Errors",
+      "craa5_adminid": "ADMIN",
+      "craa5_designation": "DESIGNATION",
+      "craa5_email": "EMAIL",
+      "craa5_emp_id": "EMP_ID",
+      "craa5_first_name": "FIRST_NAME",
+      "craa5_last_name": "LAST_NAME",
+      "craa5_name": "Name",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "ADMINs",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "ADMINs (Views)",
+    "Name": "_craa5_admin_views",
+    "RelatedEntityName": "ADMINs",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1aec698c-abd1-45a7-b2a3-081f63905d66": "ADMIN Advanced Find View",
+      "3f169a0a-2128-488a-997c-1a267ac748db": "ADMIN Associated View",
+      "a79c6145-6d00-4a04-a73b-82a72d382492": "Active ADMINs",
+      "d224edd1-2212-43f5-98af-5bf075570635": "Inactive ADMINs",
+      "d99eb50b-6562-4cd1-901f-e832b95523b2": "ADMIN Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (ADMINs)",
+    "Name": "craa5_admin_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "ADMINs"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "ADMINs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (ADMINs)",
+    "Name": "craa5_admin_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "ADMINs"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "ADMINs",
+    "Type": "OptionSetInfo"
+  }
+]

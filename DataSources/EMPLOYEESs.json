@@ -1,24 +1,25 @@
 [
   {
     "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
-    "EntitySetName": "craa5_employees",
+    "EntitySetName": "craa5_employeeses",
     "IsHidden": false,
     "IsSampleData": false,
     "IsWritable": true,
-    "LogicalName": "craa5_employee",
+    "LogicalName": "craa5_employees",
     "MaxGetRowsCount": 500,
-    "Name": "EMPLOYEEs",
+    "Name": "EMPLOYEESs",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "craa5_designation": "DESIGNATION",
+      "craa5_email": "EMAIL",
       "craa5_emp_id": "EMP_ID",
-      "craa5_employee_AsyncOperations": "System Jobs",
-      "craa5_employee_BulkDeleteFailures": "Bulk Delete Failures",
-      "craa5_employee_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
-      "craa5_employee_PrincipalObjectAttributeAccesses": "Field Sharing",
-      "craa5_employee_ProcessSession": "Process Sessions",
-      "craa5_employee_SyncErrors": "Sync Errors",
-      "craa5_employeeid": "EMPLOYEE",
+      "craa5_employees_AsyncOperations": "System Jobs",
+      "craa5_employees_BulkDeleteFailures": "Bulk Delete Failures",
+      "craa5_employees_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "craa5_employees_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "craa5_employees_ProcessSession": "Process Sessions",
+      "craa5_employees_SyncErrors": "Sync Errors",
+      "craa5_employeesid": "EMPLOYEES",
       "craa5_first_name": "FIRST_NAME",
       "craa5_last_name": "LAST_NAME",
       "craa5_name": "Name",
@@ -41,26 +42,26 @@
       "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
       "versionnumber": "Version Number"
     },
-    "PreferredName": "EMPLOYEEs",
+    "PreferredName": "EMPLOYEESs",
     "Type": "NativeCDSDataSourceInfo"
   },
   {
-    "DisplayName": "EMPLOYEEs (Views)",
-    "Name": "_craa5_employee_views",
-    "RelatedEntityName": "EMPLOYEEs",
+    "DisplayName": "EMPLOYEESs (Views)",
+    "Name": "_craa5_employees_views",
+    "RelatedEntityName": "EMPLOYEESs",
     "TrimmedViewName": true,
     "Type": "ViewInfo",
     "ViewInfoNameMapping": {
-      "1a155c15-5315-46e5-8748-795fe94d2c0f": "Inactive EMPLOYEEs",
-      "78e5be48-aacb-41a8-920e-c698c528a4a5": "EMPLOYEE Advanced Find View",
-      "8c1f68dd-0bfd-46a5-8d9c-2712daf5e1a8": "EMPLOYEE Lookup View",
-      "994c7d6c-64cd-452d-bde6-89bfa04fea4d": "Active EMPLOYEEs",
-      "c2051e8d-62f4-4625-b32f-0095ee6bbee2": "EMPLOYEE Associated View"
+      "5b82de93-f259-421e-a31a-b32f34c04252": "Inactive EMPLOYEESs",
+      "6671f42b-6006-4319-87ee-a6e8bb813fca": "EMPLOYEES Lookup View",
+      "9df934e6-b181-4e39-ad57-754d21afba7c": "EMPLOYEES Advanced Find View",
+      "a8262d00-4678-40ba-ae0a-3f2cad5a2eab": "EMPLOYEES Associated View",
+      "b70c84dc-3c84-4b48-b9a7-c7286eddfd43": "Active EMPLOYEESs"
     }
   },
   {
-    "DisplayName": "Status (EMPLOYEEs)",
-    "Name": "craa5_employee_statecode",
+    "DisplayName": "Status (EMPLOYEESs)",
+    "Name": "craa5_employees_statecode",
     "OptionSetInfoNameMapping": {
       "0": "Active",
       "1": "Inactive"
@@ -70,17 +71,17 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "statecode",
-        "OptionSetReferenceEntityName": "EMPLOYEEs"
+        "OptionSetReferenceEntityName": "EMPLOYEESs"
       }
     },
     "OptionSetTypeKey": "StateType",
     "RelatedColumnInvariantName": "statecode",
-    "RelatedEntityName": "EMPLOYEEs",
+    "RelatedEntityName": "EMPLOYEESs",
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Status Reason (EMPLOYEEs)",
-    "Name": "craa5_employee_statuscode",
+    "DisplayName": "Status Reason (EMPLOYEESs)",
+    "Name": "craa5_employees_statuscode",
     "OptionSetInfoNameMapping": {
       "1": "Active",
       "2": "Inactive"
@@ -90,12 +91,12 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "statuscode",
-        "OptionSetReferenceEntityName": "EMPLOYEEs"
+        "OptionSetReferenceEntityName": "EMPLOYEESs"
       }
     },
     "OptionSetTypeKey": "StatusType",
     "RelatedColumnInvariantName": "statuscode",
-    "RelatedEntityName": "EMPLOYEEs",
+    "RelatedEntityName": "EMPLOYEESs",
     "Type": "OptionSetInfo"
   }
 ]

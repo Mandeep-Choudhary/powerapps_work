@@ -1,10 +1,17 @@
 {
   "QualifiedValues": [
     {
-      "Kind": "default.cds_craa5_employee_forms",
-      "Namespace": "EMPLOYEEs (Forms)",
+      "Kind": "default.cds_craa5_admin_forms",
+      "Namespace": "ADMINs (Forms)",
       "Values": {
-        "Information": "0961f77e-5072-4f7b-ae24-77b1caf32fb8"
+        "Information": "76cd71de-52d3-401f-a1cb-c647f164a1a7"
+      }
+    },
+    {
+      "Kind": "default.cds_craa5_employees_forms",
+      "Namespace": "EMPLOYEESs (Forms)",
+      "Values": {
+        "Information": "32302503-9455-405b-a33e-e78791e6d810"
       }
     }
   ]
